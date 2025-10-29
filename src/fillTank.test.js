@@ -13,7 +13,7 @@ describe("fillTank", () => {
     };
   });
 
-  it("fuelPrice 1 baks / 1 liter and amount 10 liters", () => {
+  it("fuelPrice 1 and amount 10 liters", () => {
     expect(customer).toHaveProperty("money");
     expect(customer).toHaveProperty("vehicle");
     expect(customer).toHaveProperty("vehicle.maxTankCapacity");
@@ -33,7 +33,7 @@ describe("fillTank", () => {
     expect(isObject(customer)).toBeTruthy();
   });
 
-  it("fuelPrice 1.11 baks / 1 liter and amount is not given", () => {
+  it("fuelPrice 1.11 and amount is not given", () => {
     expect(customer).toHaveProperty("money");
     expect(customer).toHaveProperty("vehicle");
     expect(customer).toHaveProperty("vehicle.maxTankCapacity");
@@ -53,7 +53,7 @@ describe("fillTank", () => {
     expect(isObject(customer)).toBeTruthy();
   });
 
-  it("fuelPrice 0.99 baks / 1 liter and amount > tank volume", () => {
+  it("fuelPrice 0.99 and amount > tank volume", () => {
     expect(customer).toHaveProperty("money");
     expect(customer).toHaveProperty("vehicle");
     expect(customer).toHaveProperty("vehicle.maxTankCapacity");
@@ -73,7 +73,7 @@ describe("fillTank", () => {
     expect(isObject(customer)).toBeTruthy();
   });
 
-  it("fuelPrice 100 baks / 1 liter and full tank ", () => {
+  it("fuelPrice 100 and full tank ", () => {
     expect(customer).toHaveProperty("money");
     expect(customer).toHaveProperty("vehicle");
     expect(customer).toHaveProperty("vehicle.maxTankCapacity");
