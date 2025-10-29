@@ -2,7 +2,7 @@
 
 describe("fillTank", () => {
   const { fillTank } = require("./fillTank");
-
+  let customer;
   beforeEach(() => {
     customer = {
       money: 3000, // customer account balance
