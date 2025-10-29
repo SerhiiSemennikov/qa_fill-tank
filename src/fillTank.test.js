@@ -27,9 +27,6 @@ describe("fillTank", () => {
     expect(customer.money).toBe(2990);
     expect(customer.vehicle.fuelRemains).toBe(18);
 
-    const result = fillTank(customer, 1, 10);
-    expect(result).toBeUndefined();
-
     expect(isObject(customer)).toBeTruthy();
   });
 
@@ -47,9 +44,6 @@ describe("fillTank", () => {
     expect(customer.money).toBe(2964.48);
     expect(customer.vehicle.fuelRemains).toBe(40);
 
-    const result = fillTank(customer, 1.11);
-    expect(result).toBeUndefined();
-
     expect(isObject(customer)).toBeTruthy();
   });
 
@@ -66,9 +60,6 @@ describe("fillTank", () => {
 
     expect(customer.money).toBe(2968.32);
     expect(customer.vehicle.fuelRemains).toBe(40);
-
-    const result = fillTank(customer, 0.99, 100);
-    expect(result).toBeUndefined();
 
     expect(isObject(customer)).toBeTruthy();
   });
@@ -88,9 +79,6 @@ describe("fillTank", () => {
 
     expect(customer.vehicle.fuelRemains).toBe(38);
 
-    const result = fillTank(customer, 100);
-    expect(result).toBeUndefined();
-
     expect(isObject(customer)).toBeTruthy();
   });
 
@@ -108,9 +96,6 @@ describe("fillTank", () => {
     expect(customer.money).toBe(2984.81); // to the nearest hundredth part
 
     expect(customer.vehicle.fuelRemains).toBe(20.3); // to the tenth part
-
-    const result = fillTank(customer, 100);
-    expect(result).toBeUndefined();
 
     expect(isObject(customer)).toBeTruthy();
   });
@@ -131,10 +116,12 @@ describe("fillTank", () => {
 
     expect(customer.vehicle.fuelRemains).toBe(8);
 
-    const result = fillTank(customer, 100);
-    expect(result).toBeUndefined();
-
     expect(isObject(customer)).toBeTruthy();
+  });
+
+  it("expect undefined with no return", () => {
+    const result = fillTank(customer, 1, 1.99);
+    expect(result).toBeUndefined();
   });
 });
 
